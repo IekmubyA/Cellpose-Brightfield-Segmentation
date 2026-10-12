@@ -11,7 +11,7 @@ Subfolders are not scanned, and the original TIFF images are not modified.
 
 ## Requirements
 
-A working Python environment with Cellpose must be installed separately. The selected environment should contain Cellpose, PyTorch and the scientific Python dependencies required by Cellpose and this script.
+A working Python environment with Cellpose must be installed separately. The selected environment should contain Cellpose, PyTorch, and the scientific Python dependencies required by Cellpose and this script.
 
 For GPU processing, the selected PyTorch installation must have working CUDA support. CPU processing can be used by clearing the **Use GPU (CUDA)** option.
 
@@ -30,7 +30,7 @@ The Windows launcher only opens the graphical interface. It does not install Cel
 
 The GUI can also be started directly with:
 
-```
+```bash
 python Cellpose_Simple_GUI.py
 ```
 
@@ -38,8 +38,8 @@ python Cellpose_Simple_GUI.py
 
 The following parameters are fixed in the script:
 
-- flow_threshold = 0.6`
-- cellprob_threshold = 0.0`
+- `flow_threshold = 0.6`
+- `cellprob_threshold = 0.0`
 - normalization percentiles: `1–99`
 - JPEG preview quality: `95`
 
@@ -47,19 +47,24 @@ Images are processed sequentially, one TIFF at a time.
 
 ## Input
 
-The input folder should contain 2D brightfield TIFF images. Supported extensions are `.tif` and `.tiff`.
+The input folder should contain 2D brightfield TIFF images.
+
+Supported extensions:
+
+- `.tif`
+- `.tiff`
 
 ## Output
 
 For an input image such as:
 
-```
+```text
 image_001.tif
 ```
 
 the program creates:
 
-```
+```text
 OutputFolder/
 ├── MasksCell/
 │   └── image_001.tif
